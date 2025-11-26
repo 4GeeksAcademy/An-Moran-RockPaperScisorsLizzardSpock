@@ -11,19 +11,19 @@ const rules = {
 const jugar = (userChoice) => {
   let rncomputerchoice = Math.floor(Math.random() * choices.length);
   let computerChoice = choices[rncomputerchoice];
- 
+  let result = " ";
 
   if (userChoice === computerChoice) {
-    return "It's a draw!"
+    result = console.log("It's a draw!");
   }
   else if (rules[userChoice].includes(computerChoice)) {
-    return "You win!"
+    result = console.log( "You win!");
   }
   else {
-    return "You lose! Loser :P"
+    result= console.log ("You lose! Loser :P");
   }
 }
 
-
+document.getElementById("result").innerText = result; 
 
 
